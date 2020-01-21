@@ -9,11 +9,11 @@
 			<img src="user.png" class="avatar">
 
 			<h1>Login Here</h1>
-			<form>
+			<form method="post">
 				<p>Username</p>
-				<input type="text" name="userid" placeholder="Enter Username">
+				<input type="text" name="userid" placeholder="Enter Username" required>
 				<p>Password</p>
-				<input type="Password" name="pswrd" placeholder="Enter Password">
+				<input type="Password" name="pswrd" placeholder="Enter Password" required>
 				<input type="submit"  onclick="check(this.form)" value="Login"><br>
 				<a href="#">Lost your password?</a><br>
 
@@ -26,7 +26,7 @@
 			{
 				window.open('/Users/fgk/Desktop/JAM-master/student.html')
 			}
-			else
+			else if(form.userid.value!="" && form.pswrd.value!="")
 			{
 			  alert("the username and password do not match")
 			}
